@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@+id/IP"
+        app:layout_constraintStart_toStartOf="@+id/IP"
+        app:layout_constraintTop_toBottomOf="@+id/IP"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="0.0.0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="405dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/IpDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP Adress decimal"
+            app:layout_constraintEnd_toStartOf="@+id/IpBinary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/IpBinary" />
+
+        <TextView
+            android:id="@+id/IpDecimalV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/IpDecimal"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/IpDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/IpBinaryV" />
+
+        <TextView
+            android:id="@+id/IpBinary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP Adress Binary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/IpBinaryV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/IpBinary"
+            app:layout_constraintStart_toStartOf="@+id/IpBinary"
+            app:layout_constraintTop_toBottomOf="@+id/IpBinary" />
+
+        <TextView
+            android:id="@+id/maskDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mask Decimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/IpBinary"
+            app:layout_constraintTop_toTopOf="@+id/IpBinary" />
+
+        <TextView
+            android:id="@+id/maskDecimalV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintTop_toBottomOf="@+id/IpBinaryV"
+            app:layout_constraintEnd_toEndOf="@+id/maskDecimal"
+            app:layout_constraintStart_toStartOf="@+id/maskDecimal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="401dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/MaskBinary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mask Binary"
+            app:layout_constraintEnd_toStartOf="@+id/NetAddressDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/NetAddressDecimal" />
+
+        <TextView
+            android:id="@+id/MaskBinaryV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/MaskBinary"
+            app:layout_constraintStart_toStartOf="@+id/MaskBinary"
+            app:layout_constraintTop_toBottomOf="@+id/NetAddressDecimalV" />
+
+        <TextView
+            android:id="@+id/NetAddressDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Address Decimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/NetAddressDecimalV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/NetAddressDecimal"
+            app:layout_constraintStart_toStartOf="@+id/NetAddressDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/NetAddressDecimal" />
+
+        <TextView
+            android:id="@+id/NetAddressBinary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Address Binary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/NetAddressDecimal"
+            app:layout_constraintTop_toTopOf="@+id/NetAddressDecimal" />
+
+        <TextView
+            android:id="@+id/NetAddressBinaryV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintTop_toBottomOf="@+id/NetAddressDecimalV"
+            app:layout_constraintEnd_toEndOf="@+id/NetAddressBinary"
+            app:layout_constraintStart_toStartOf="@+id/NetAddressBinary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="415dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/BroadcastAddressBinary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast Binary"
+            app:layout_constraintEnd_toStartOf="@+id/BroadcastAddressDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/BroadcastAddressDecimal" />
+
+        <TextView
+            android:id="@+id/BroadcastAddressBinaryV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/BroadcastAddressBinary"
+            app:layout_constraintStart_toStartOf="@+id/BroadcastAddressBinary"
+            app:layout_constraintTop_toBottomOf="@+id/BroadcastAddressDecimallV" />
+
+        <TextView
+            android:id="@+id/BroadcastAddressDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast Decimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/BroadcastAddressDecimallV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/BroadcastAddressDecimal"
+            app:layout_constraintStart_toStartOf="@+id/BroadcastAddressDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/BroadcastAddressDecimal" />
+
+        <TextView
+            android:id="@+id/MaxHostDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Host Decimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BroadcastAddressDecimal"
+            app:layout_constraintTop_toTopOf="@+id/BroadcastAddressDecimal" />
+
+        <TextView
+            android:id="@+id/MaxHostDecimalV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/MaxHostDecimal"
+            app:layout_constraintStart_toStartOf="@+id/MaxHostDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/BroadcastAddressDecimallV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="417dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="252dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/MaxHostBinary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max Host Binary"
+            app:layout_constraintEnd_toStartOf="@+id/MinHostDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/MinHostDecimal" />
+
+        <TextView
+            android:id="@+id/MaxHostBinaryV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/MaxHostBinary"
+            app:layout_constraintStart_toStartOf="@+id/MaxHostBinary"
+            app:layout_constraintTop_toBottomOf="@+id/MinHostDecimalV" />
+
+        <TextView
+            android:id="@+id/MinHostDecimal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min Host Decimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MinHostDecimalV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/MinHostDecimal"
+            app:layout_constraintStart_toStartOf="@+id/MinHostDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/MinHostDecimal" />
+
+        <TextView
+            android:id="@+id/MinHostBinary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min Host Binary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MinHostDecimal"
+            app:layout_constraintTop_toTopOf="@+id/MinHostDecimal" />
+
+        <TextView
+            android:id="@+id/MinHostBinaryV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="11dp"
+            app:layout_constraintEnd_toEndOf="@+id/MinHostBinary"
+            app:layout_constraintStart_toStartOf="@+id/MinHostBinary"
+            app:layout_constraintTop_toBottomOf="@+id/MinHostDecimalV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="420dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="336dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <TextView
+            android:id="@+id/MaskNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mask Number"
+            app:layout_constraintEnd_toStartOf="@+id/AmountOfHost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/AmountOfHost" />
+
+        <TextView
+            android:id="@+id/MaskNumberV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintEnd_toEndOf="@+id/MaskNumber"
+            app:layout_constraintStart_toStartOf="@+id/MaskNumber"
+            app:layout_constraintTop_toBottomOf="@+id/AmountOfHostV" />
+
+        <TextView
+            android:id="@+id/AmountOfHost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount Of Host"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/AmountOfHostV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="-"
+            app:layout_constraintEnd_toEndOf="@+id/AmountOfHost"
+            app:layout_constraintStart_toStartOf="@+id/AmountOfHost"
+            app:layout_constraintTop_toBottomOf="@+id/AmountOfHost" />
+
+        <TextView
+            android:id="@+id/NetworkClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Network Class"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/AmountOfHost"
+            app:layout_constraintTop_toTopOf="@+id/AmountOfHost" />
+
+        <TextView
+            android:id="@+id/NetworkClassV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintEnd_toEndOf="@+id/NetworkClass"
+            app:layout_constraintStart_toStartOf="@+id/NetworkClass"
+            app:layout_constraintTop_toBottomOf="@+id/AmountOfHostV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/SubnetNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Amount Of Host"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+    <TextView
+        android:id="@+id/SubnetNumberV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/SubnetNumber"
+        app:layout_constraintStart_toStartOf="@+id/SubnetNumber"
+        app:layout_constraintTop_toBottomOf="@+id/SubnetNumber" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
