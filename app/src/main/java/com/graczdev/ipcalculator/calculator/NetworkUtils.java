@@ -1,9 +1,6 @@
 package com.graczdev.ipcalculator.calculator;
 
-import java.util.Arrays;
 import java.util.function.Function;
-
-import panda.std.stream.PandaStream;
 
 public class NetworkUtils {
 
@@ -31,10 +28,7 @@ public class NetworkUtils {
     public static String toDecimal(String binary) {
         String[] binaryParts = binary.contains(".")
                 ? binary.split("\\.")
-                : PandaStream.of(binary)
-                .flatMapStream(s -> Arrays.stream(s.split("(?<=\\G.{16})")))
-                .flatMapStream(s -> Arrays.stream(s.split("(?<=\\G.{8})")))
-                .toArray(String[]::new);
+                : binary.split(SPLIT_FOR_8_PARTS);
 
         return String.join(".", convert(binaryParts, TO_DECIMAL_FUNCTION));
     }
